@@ -1,0 +1,527 @@
+~ :> ls
+Applications         Documents            Movies               Pictures             dotfiles             practice_cloning
+Creative Cloud Files Downloads            Music                Public               lpthw                temp
+Desktop              Library              Phase0               devBootcampStuff     octopus
+
+~ :> mkdir phase0-GPS1.1
+
+~ :> ls
+Applications         Documents            Movies               Pictures             dotfiles             phase0-GPS1.1
+Creative Cloud Files Downloads            Music                Public               lpthw                practice_cloning
+Desktop              Library              Phase0               devBootcampStuff     octopus              temp
+
+~ :> cd phase0-GPS1.1
+
+phase0-GPS1.1 :> git clone https://github.com/Mikael491/phase-0-gps-1.git
+Cloning into 'phase-0-gps-1'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done.
+
+phase0-GPS1.1 :> ls
+phase-0-gps-1
+
+phase0-GPS1.1 :> git status
+fatal: Not a git repository (or any of the parent directories): .git
+
+phase0-GPS1.1 :> git init
+Initialized empty Git repository in /Users/mikaelteklehaimanot/phase0-GPS1.1/.git/
+
+phase0-GPS1.1 :> ls
+phase-0-gps-1
+
+phase0-GPS1.1 :> ls -la
+total 0
+drwxr-xr-x   4 mikaelteklehaimanot  staff   136B Apr  2 16:06 .
+drwxr-xr-x+ 37 mikaelteklehaimanot  staff   1.2K Apr  2 16:05 ..
+drwxr-xr-x   9 mikaelteklehaimanot  staff   306B Apr  2 16:06 .git
+drwxr-xr-x   4 mikaelteklehaimanot  staff   136B Apr  2 16:06 phase-0-gps-1
+
+phase0-GPS1.1 :> cd phase-0-gps-1
+
+phase-0-gps-1 :> ls
+README.md
+
+phase-0-gps-1 :> ls -la
+total 8
+drwxr-xr-x   4 mikaelteklehaimanot  staff   136B Apr  2 16:06 .
+drwxr-xr-x   4 mikaelteklehaimanot  staff   136B Apr  2 16:06 ..
+drwxr-xr-x  12 mikaelteklehaimanot  staff   408B Apr  2 16:06 .git
+-rw-r--r--   1 mikaelteklehaimanot  staff   113B Apr  2 16:06 README.md
+
+phase-0-gps-1 :> cd
+
+~ :> rm -rf phase0-GPS1.1
+
+~ :> ls
+Applications         Documents            Movies               Pictures             dotfiles             practice_cloning
+Creative Cloud Files Downloads            Music                Public               lpthw                temp
+Desktop              Library              Phase0               devBootcampStuff     octopus
+
+~ :> git clone https://github.com/Mikael491/phase-0-gps-1.git
+Cloning into 'phase-0-gps-1'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done.
+
+~ :> ls
+Applications         Documents            Movies               Pictures             dotfiles             phase-0-gps-1
+Creative Cloud Files Downloads            Music                Public               lpthw                practice_cloning
+Desktop              Library              Phase0               devBootcampStuff     octopus              temp
+
+~ :> cd phase-0-gps-1
+
+phase-0-gps-1 :> ls -la
+total 8
+drwxr-xr-x   4 mikaelteklehaimanot  staff   136B Apr  2 16:07 .
+drwxr-xr-x+ 37 mikaelteklehaimanot  staff   1.2K Apr  2 16:07 ..
+drwxr-xr-x  12 mikaelteklehaimanot  staff   408B Apr  2 16:07 .git
+-rw-r--r--   1 mikaelteklehaimanot  staff   113B Apr  2 16:07 README.md
+
+phase-0-gps-1 :> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+phase-0-gps-1 :> touch awesome_page.md
+
+phase-0-gps-1 :> git push origin master
+Username for 'https://github.com': Mikael491
+Password for 'https://Mikael491@github.com':
+Everything up-to-date
+
+phase-0-gps-1 :> git branch
+* master
+
+phase-0-gps-1 :> git co -b add-command-log
+Switched to a new branch 'add-command-log'
+
+phase-0-gps-1 :> git branch
+* add-command-log
+  master
+
+phase-0-gps-1 :> ls
+README.md       awesome_page.md
+
+phase-0-gps-1 :> subl readme.md
+
+phase-0-gps-1 :> git status
+On branch add-command-log
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+  modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+  awesome_page.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+phase-0-gps-1 :> git branch
+* add-command-log
+  master
+
+phase-0-gps-1 :> git status
+On branch add-command-log
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+  modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+  awesome_page.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+phase-0-gps-1 :> git add readme.md
+
+phase-0-gps-1 :> git commit -m "Added command line & meanings used so far"
+On branch add-command-log
+Changes not staged for commit:
+  modified:   README.md
+
+Untracked files:
+  awesome_page.md
+
+no changes added to commit
+
+phase-0-gps-1 :> git status
+On branch add-command-log
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+  modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+  awesome_page.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+phase-0-gps-1 :> git add awesome_page.md
+
+phase-0-gps-1 :> git statis
+git: 'statis' is not a git command. See 'git --help'.
+
+Did you mean this?
+  status
+
+phase-0-gps-1 :> git status
+On branch add-command-log
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+  new file:   awesome_page.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+  modified:   README.md
+
+
+phase-0-gps-1 :> git add readme.md
+
+phase-0-gps-1 :> git status
+On branch add-command-log
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+  new file:   awesome_page.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+  modified:   README.md
+
+
+phase-0-gps-1 :> git branch
+* add-command-log
+  master
+
+phase-0-gps-1 :> git commit -m "added command line terms and meanings"
+[add-command-log dca5b4a] added command line terms and meanings
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 awesome_page.md
+
+phase-0-gps-1 :> git status
+On branch add-command-log
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+  modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+phase-0-gps-1 :> git co master
+M README.md
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+phase-0-gps-1 :> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+  modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+phase-0-gps-1 :> git commit -m "added command line tools used so far"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  modified:   README.md
+
+no changes added to commit
+
+phase-0-gps-1 :> git add readme.md
+
+phase-0-gps-1 :> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+  modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+phase-0-gps-1 :> git commit readme.md
+error: pathspec 'readme.md' did not match any file(s) known to git.
+
+phase-0-gps-1 :> git commit -m "added command line tools"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  modified:   README.md
+
+no changes added to commit
+
+phase-0-gps-1 :> git branch
+  add-command-log
+* master
+
+phase-0-gps-1 :> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+  modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+phase-0-gps-1 :> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+  modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+phase-0-gps-1 :> git add readme.md
+
+phase-0-gps-1 :> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+  modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+phase-0-gps-1 :> git commit -a
+[master fb6e213] added expl of command line tools used so far
+ 1 file changed, 41 insertions(+)
+
+phase-0-gps-1 :> git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+phase-0-gps-1 :> git push origin master
+Username for 'https://github.com': Mikael491
+Password for 'https://Mikael491@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 776 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Mikael491/phase-0-gps-1.git
+   0d857fc..fb6e213  master -> master
+
+phase-0-gps-1 :> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+phase-0-gps-1 :> ls
+README.md
+
+phase-0-gps-1 :> git branch
+  add-command-log
+* master
+
+phase-0-gps-1 :> git co add-command-log
+Switched to branch 'add-command-log'
+
+phase-0-gps-1 :> ls
+README.md       awesome_page.md
+
+phase-0-gps-1 :> git co master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+phase-0-gps-1 :> git merge add-command-log
+Merge made by the 'recursive' strategy.
+ awesome_page.md | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 awesome_page.md
+
+phase-0-gps-1 :> git branch
+  add-command-log
+* master
+
+phase-0-gps-1 :> ls
+README.md       awesome_page.md
+
+phase-0-gps-1 :> git push origin master
+Username for 'https://github.com': Mikael491
+Password for 'https://Mikael491@github.com':
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 593 bytes | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/Mikael491/phase-0-gps-1.git
+   fb6e213..b45cd36  master -> master
+
+phase-0-gps-1 :> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+phase-0-gps-1 :> git co -b Mikael-reflection-branch
+Switched to a new branch 'Mikael-reflection-branch'
+
+phase-0-gps-1 :> touch Teklehaimanot-reflection.md
+
+phase-0-gps-1 :> ls
+README.md                   Teklehaimanot-reflection.md awesome_page.md
+
+phase-0-gps-1 :> subl teklehaimanot-reflection-branch
+
+phase-0-gps-1 :> subl Teklehaimanot-reflection-branch.md
+
+phase-0-gps-1 :> git status
+On branch Mikael-reflection-branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+  Teklehaimanot-reflection-branch.md
+  Teklehaimanot-reflection.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+phase-0-gps-1 :> git teklehaimanot-reflection.md
+git: 'teklehaimanot-reflection.md' is not a git command. See 'git --help'.
+
+phase-0-gps-1 :> subl teklehaimanot-reflection.md
+
+phase-0-gps-1 :> git status
+On branch Mikael-reflection-branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+  Teklehaimanot-reflection-branch.md
+  Teklehaimanot-reflection.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+phase-0-gps-1 :> ls
+README.md                          Teklehaimanot-reflection.md
+Teklehaimanot-reflection-branch.md awesome_page.md
+
+phase-0-gps-1 :> rm -rf Teklehaimanot-reflection-branch.md
+
+phase-0-gps-1 :> ls
+README.md                   Teklehaimanot-reflection.md awesome_page.md
+
+phase-0-gps-1 :> git status
+On branch Mikael-reflection-branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+  Teklehaimanot-reflection.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+phase-0-gps-1 :> git add Teklehaimanot-reflection.md
+
+phase-0-gps-1 :> git status
+On branch Mikael-reflection-branch
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+  new file:   Teklehaimanot-reflection.md
+
+
+phase-0-gps-1 :> git branch
+* Mikael-reflection-branch
+  add-command-log
+  master
+
+phase-0-gps-1 :> git commit -m "added reflection"
+[Mikael-reflection-branch 498c857] added reflection
+ 1 file changed, 34 insertions(+)
+ create mode 100644 Teklehaimanot-reflection.md
+
+phase-0-gps-1 :> git merge master
+Already up-to-date.
+
+phase-0-gps-1 :> git co master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+phase-0-gps-1 :> ls
+README.md       awesome_page.md
+
+phase-0-gps-1 :> git branch
+  Mikael-reflection-branch
+  add-command-log
+* master
+
+phase-0-gps-1 :> git push https://github.com/Mikael491/phase-0-gps-1.git
+Username for 'https://github.com': mikael491
+Password for 'https://mikael491@github.com':
+Everything up-to-date
+
+phase-0-gps-1 :> git branch
+  Mikael-reflection-branch
+  add-command-log
+* master
+
+phase-0-gps-1 :> git merge Mikael-reflection-branch
+Updating b45cd36..498c857
+Fast-forward
+ Teklehaimanot-reflection.md | 34 ++++++++++++++++++++++++++++++++++
+ 1 file changed, 34 insertions(+)
+ create mode 100644 Teklehaimanot-reflection.md
+
+phase-0-gps-1 :> ls
+README.md                   Teklehaimanot-reflection.md awesome_page.md
+
+phase-0-gps-1 :> git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+phase-0-gps-1 :> git push origin master
+Username for 'https://github.com': mikael491
+Password for 'https://mikael491@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.96 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Mikael491/phase-0-gps-1.git
+   b45cd36..498c857  master -> master
+
+phase-0-gps-1 :> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+phase-0-gps-1 :> cd
+
+~ :> cd phase-0-gps-1
+
+phase-0-gps-1 :> open .
+
+phase-0-gps-1 :>
